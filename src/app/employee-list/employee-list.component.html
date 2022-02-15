@@ -1,0 +1,27 @@
+<div class="p-5">
+    <h2 class="mb-4">Employees</h2>
+    <div>
+        <table class="table text-center table-bordered table-responsive-md shadow">
+            <thead class="table-dark">
+                <tr>
+                    <td>Employee ID</td>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Salary</td>
+                    <td>DOB</td>
+                    <td>Email</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr appColor *ngFor="let emp of employeeList">
+                        <td>{{emp.EmployeeID}}</td>
+                        <td>{{emp.FirstName|titlecase}}</td>
+                        <td>{{emp.LastName|titlecase}}</td>
+                        <td>{{emp.Salary |currency}}</td>
+                        <td>{{emp.DOB |date:'mediumDate' |uppercase}}</td>
+                        <td>{{emp.Email}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
